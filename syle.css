@@ -1,0 +1,55 @@
+/* Основные стили для страницы */
+body {
+    font-family: 'ArTarumianAnpuit', cursive;
+    margin: 0;
+    padding: 0;
+    background: #f9e7d9;
+    color: #3e3e3e;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Заголовок */
+h1 {
+    font-family: 'ArTarumianAnpuit', cursive;
+    font-size: 10vw;
+    color: #b78c56;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+.form-group {
+    margin-top: 20px;
+}
+
+/* Стили для полей ввода */
+input[type="file"], input[type="text"], input[type="date"], input[type="time"], select, button {
+    padding: 12px;
+    font-size: 4vw;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Стили для кнопки */
+button {
+    background: linear-gradient(135deg, #f9b56b, #d4a10e);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект на кнопке при наведении */
+button:hover {
+    background: linear-gradient(135deg, #d4a10e, #f9b56b);
+    transform: scale(1.05);
+}
+
+/* Стили для канваса и предпросмотра изображения */
+canvas, #previewImage {
+    margin-top: 30px;
+    max-width: 100%;
+    display: none;
+}

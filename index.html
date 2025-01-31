@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Սвадебное հրավիրատոմս</title>
+    
+    <!-- Подключение шрифтов из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=ArTarumianAnpuit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arek+Semibold&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ArTarumianBarak&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sylfean&display=swap" rel="stylesheet">
+
+    <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>ՀՐԱՎԻՐԱՏՈՄՍ</h1>
+        <div class="form-group">
+            <label>Ընտրեք ֆոնը ձեր սարքից:</label>
+            <input type="file" id="backgroundUpload" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label>Ընտրեք օրվա տիպը:</label>
+            <select id="invitationType">
+                <option value="single">Մի մարդու համար</option>
+                <option value="family">Ընտանիքի համար</option>
+            </select>
+        </div>
+        <div class="form-group" id="nameInputs">
+            <input type="text" id="guestName1" placeholder="Մուտքագրեք Ձեր անունը">
+        </div>
+        <div class="form-group">
+            <label>Մուտքագրեք անունները երիտասարդների:</label>
+            <input type="text" id="brideName" placeholder="Արեւիկ / Աննա">
+            <input type="text" id="groomName" placeholder="Մերուժան / Անդրանիկ">
+        </div>
+        <div class="form-group">
+            <label>Մուտքագրեք дату:</label>
+            <input type="date" id="weddingDate">
+        </div>
+        <div class="form-group">
+            <label>Մուտքագրեք ժամը:</label>
+            <input type="time" id="weddingTime">
+        </div>
+        <div class="form-group">
+            <label>Մուտքագրեք հարսանյաց վայր:</label>
+            <input type="text" id="weddingPlace" placeholder="Բանգլադեշի Ժողովարան">
+        </div>
+        <div class="form-group">
+            <label>Ընտրեք շրիտը:</label>
+            <select id="fontSelect">
+                <option value="ArTarumianAnpuit">ArTarumianAnpuit</option>
+                <option value="Arek Semibold">Arek Semibold</option>
+                <option value="ArTarumianBarak">ArTarumianBarak</option>
+                <option value="Sylfean">Sylfean</option>
+            </select>
+        </div>
+        <button onclick="generateInvitation()">Ստեղծել հրավիրատոմս</button>
+        <canvas id="invitationCanvas"></canvas>
+        <img id="previewImage" />
+        <button onclick="saveAsJPG()">Պահպանել որպես JPG</button>
+    </div>
+
+    <!-- Подключение внешнего JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
